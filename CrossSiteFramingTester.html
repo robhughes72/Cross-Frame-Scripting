@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Cross-Site Framing Vulnerability Test</title>
+</head>
+<script>
+function test(site)
+{
+    document.getElementById('vulnsite').src = site;
+}
+</script>
+<body bgcolor="#193661">
+<h1 style="color:white">Cross-Site Framing Vulnerability Tester</h1>
+<br/>
+<input type="button" onclick="test(document.getElementById('site').value);" value="Test">
+<input type="text" style="width:400" id="site" value="https://eus-stg.viabenefitsaccounts.com/><br>
+<iframe id="vulnsite"  width="1024" height="900" src="https://eus-stg.viabenefitsaccounts.com/"></iframe>
+</body>
+</html>
